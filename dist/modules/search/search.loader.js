@@ -1,0 +1,57 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const request = require("request");
+const $ = require("cheerio");
+const common_1 = require("@nestjs/common");
+const playlist_parser_1 = require("./playlist.parser");
+const song_parser_1 = require("./song.parser");
+const video_parser_1 = require("./video.parser");
+let SearchLoader = class SearchLoader {
+    constructor(playlistParser, songParser, videoParser) {
+        this.playlistParser = playlistParser;
+        this.songParser = songParser;
+        this.videoParser = videoParser;
+        this.baseURL = 'http://www.nhaccuatui.com/tim-kiem?q=';
+    }
+    response(query) {
+        return new Promise((resolve, reject) => {
+            request.get(this.baseURL + query, (error, response, body) => {
+                if (error) {
+                    return reject(error);
+                }
+                const $list = $(body).find('ul.search_returns_list');
+                const self = this;
+                const $songs = $list.find('li.list_song.search');
+                const songs = $songs.map(function (i, elem) {
+                    return self.songParser.parse($(this));
+                }).get();
+                const $playlists = $list.find('li.list_album');
+                const playlists = $playlists.map(function (i, elem) {
+                    return self.playlistParser.parse($(this));
+                }).get();
+                const $videos = $list.find('li.list_video');
+                const videos = $videos.map(function (i, elem) {
+                    return self.videoParser.parse($(this));
+                }).get();
+                resolve({ songs, playlists, videos });
+            });
+        });
+    }
+};
+SearchLoader = __decorate([
+    common_1.Component(),
+    __metadata("design:paramtypes", [playlist_parser_1.PlaylistParser,
+        song_parser_1.SongParser,
+        video_parser_1.VideoParser])
+], SearchLoader);
+exports.SearchLoader = SearchLoader;
+//# sourceMappingURL=search.loader.js.map
