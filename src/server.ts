@@ -1,5 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { ApplicationModule } from './modules/app.module';
 
+let port = process.env.PORT || 3000
 const app = NestFactory.create(ApplicationModule);
-app.listen(3000, () => console.log('Application is listening on port 3000.'));
+app.listen(port, () => console.log(`Application is listening on port ${port}.`));
