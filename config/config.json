@@ -14,10 +14,10 @@
     "dialect": "postgres"
   },
   "production": {
-    "username": "hungdo",
-    "password": null,
-    "database": "musicapi-production",
-    "host": "127.0.0.1",
+    "username": "ohhptpydmrargc",
+    "password": "258b31a34a8ba11e67f62b114ed3ae57209fd466bee61e29a6dd1aeb3b25457c",
+    "database": "d7led4rstv9mhs",
+    "host": "ec2-174-129-41-23.compute-1.amazonaws.com",
     "dialect": "postgres"
   }
 }
