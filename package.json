@@ -25,7 +25,8 @@
     "rxjs": "^5.4.0",
     "sequelize": "^3.30.4",
     "typescript": "^2.2.1",
-    "xml2js": "^0.4.17"
+    "xml2js": "^0.4.17",
+    "sequelize-cli": "^2.7.0"
   },
   "devDependencies": {
     "@types/chai": "^4.0.0",
@@ -35,7 +36,6 @@
     "@types/request": "0.0.43",
     "chai": "^4.0.1",
     "mocha": "^3.4.2",
-    "sequelize-cli": "^2.7.0",
     "ts-node": "^2.1.0"
   }
 }
