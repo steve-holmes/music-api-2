@@ -1,0 +1,149 @@
+{
+    "song": [{
+        "name": "Mới & Hot",
+        "categories": [
+            { "name": "Mới & Hot", "link": "bai-hat", "url": "bai-hat/bai-hat" }
+        ]
+    }, {
+        "name": "Việt Nam",
+        "categories": [
+            { "name": "Nhạc Trẻ", "link": "nhac-tre", "url": "bai-hat/nhac-tre" },
+            { "name": "Trữ Tình", "link": "tru-tinh", "url": "bai-hat/tru-tinh" },
+            { "name": "Remix Việt", "link": "remix-viet", "url": "bai-hat/remix-viet" },
+            { "name": "Rap Việt", "link": "rap-viet", "url": "bai-hat/rap-viet" },
+            { "name": "Tiền Chiến", "link": "tien-chien", "url": "bai-hat/tien-chien" },
+            { "name": "Nhạc Trịnh", "link": "nhac-trinh", "url": "bai-hat/nhac-trinh" },
+            { "name": "Thiếu Nhi", "link": "thieu-nhi", "url": "bai-hat/thieu-nhi" },
+            { "name": "Rock Việt", "link": "rock-viet", "url": "bai-hat/rock-viet" },
+            { "name": "Cách Mạng", "link": "cach-mang", "url": "bai-hat/cach-mang"}
+        ]
+    }, {
+        "name": "Âu Mỹ",
+        "categories": [
+            { "name": "Pop", "link": "pop", "url": "bai-hat/pop" },
+            { "name": "Rock", "link": "rock", "url": "bai-hat/rock" },
+            { "name": "Electronica/Dance", "link": "electronicadance", "url": "bai-hat/electronicadance" },
+            { "name": "R&B/Hip Hop/Rap", "link": "rbhip-hoprap", "url": "bai-hat/bhip-hoprap" },
+            { "name": "Blues/Jazz", "link": "bluesjazz", "url": "bai-hat/bluesjazz" },
+            { "name": "Country", "link": "country", "url": "bai-hat/country" },
+            { "name": "Latin", "link": "latin", "url": "bai-hat/latin" },
+            { "name": "Indie", "link": "indie", "url": "bai-hat/indie" },
+            { "name": "Âu Mỹ Khác", "link": "au-my-khac", "url": "bai-hat/au-my-khac" }
+        ]
+    }, {
+        "name": "Châu Á",
+        "categories": [
+            { "name": "Nhạc Hàn", "link": "nhac-han", "url": "bai-hat/nhac-han" },
+            { "name": "Nhạc Hoa", "link": "nhac-nhat", "url": "bai-hat/nhac-nhat" },
+            { "name": "Nhạc Nhật", "link": "nhac-thai", "url": "bai-hat/nhac-thai" },
+            { "name": "Nhạc Thái", "link": "nhac-hoa", "url": "bai-hat/nhac-hoa" }
+        ]
+    }, {
+        "name": "Khác",
+        "categories": [
+            { "name": "Beat", "link": "beat", "url": "bai-hat/beat" },
+            { "name": "Không Lời", "link": "khong-loi", "url": "bai-hat/khong-loi" },
+            { "name": "Thể Loại Khác", "link": "the-loai-khac", "url": "bai-hat/the-loai-khac" },
+            { "name": "Tui Hát", "link": "tui-hat", "url": "bai-hat/tui-hat" }
+        ]
+    }],
+    "playlist": [{
+        "name": "Mới & Hot",
+        "categories": [
+            { "name": "Mới & Hot", "link": "playlist", "url": "playlist/playlist" }
+        ]
+    }, {
+        "name": "Việt Nam",
+        "categories": [
+            { "name": "Nhạc Trẻ", "link": "nhac-tre", "url": "playlist/nhac-tre" },
+            { "name": "Trữ Tình", "link": "tru-tinh", "url": "playlist/tru-tinh" },
+            { "name": "Remix Việt", "link": "remix-viet", "url": "playlist/remix-viet" },
+            { "name": "Rap Việt", "link": "rap-viet", "url": "playlist/rap-viet" },
+            { "name": "Tiền Chiến", "link": "tien-chien", "url": "playlist/tien-chien" },
+            { "name": "Nhạc Trịnh", "link": "nhac-trinh", "url": "playlist/nhac-trinh" },
+            { "name": "Thiếu Nhi", "link": "thieu-nhi", "url": "playlist/thieu-nhi" },
+            { "name": "Rock Việt", "link": "rock-viet", "url": "playlist/rock-viet" },
+            { "name": "Cách Mạng", "link": "cach-mang", "url": "playlist/cach-mang"}
+        ]
+    }, {
+        "name": "Âu Mỹ",
+        "categories": [
+            { "name": "Pop", "link": "pop", "url": "playlist/pop" },
+            { "name": "Rock", "link": "rock", "url": "playlist/rock" },
+            { "name": "Electronica/Dance", "link": "electronicadance", "url": "playlist/electronicadance" },
+            { "name": "R&B/Hip Hop/Rap", "link": "rbhip-hoprap", "url": "playlist/rbhip-hoprap" },
+            { "name": "Blues/Jazz", "link": "bluesjazz", "url": "playlist/bluesjazz" },
+            { "name": "Country", "link": "country", "url": "playlist/country" },
+            { "name": "Latin", "link": "latin", "url": "playlist/latin" },
+            { "name": "Indie", "link": "indie", "url": "playlist/indie" },
+            { "name": "Âu Mỹ Khác", "link": "au-my-khac", "url": "playlist/au-my-khac" }
+        ]
+    }, {
+        "name": "Châu Á",
+        "categories": [
+            { "name": "Nhạc Hàn", "link": "nhac-han", "url": "playlist/nhac-han" },
+            { "name": "Nhạc Nhật", "link": "nhac-nhat", "url": "playlist/nhac-nhat" },
+            { "name": "Nhạc Thái", "link": "nhac-thai", "url": "playlist/nhac-thai" },
+            { "name": "Nhạc Hoa", "link": "nhac-hoa", "url": "playlist/nhac-hoa" }
+        ]
+    }, {
+        "name": "Khác",
+        "categories": [
+            { "name": "Không Lời", "link": "khong-loi", "url": "playlist/khong-loi" },
+            { "name": "Nhạc Phim", "link": "nhac-phim", "url": "playlist/nhac-phim" },
+            { "name": "Thể Loại Khác", "link": "the-loai-khac", "url": "playlist/the-loai-khac" }
+        ]
+    }],
+    "video": [{
+        "name": "Việt Nam",
+        "categories": [
+            { "name": "Nhạc Trẻ", "link": "am-nhac-viet-nam-nhac-tre", "url": "video-am-nhac-viet-nam-nhac-tre" },
+            { "name": "Trữ Tình", "link": "am-nhac-viet-nam-tru-tinh", "url": "video-am-nhac-viet-nam-tru-tinh" },
+            { "name": "Cách Mạng", "link": "am-nhac-viet-nam-cach-mang", "url": "video-am-nhac-viet-nam-cach-mang" },
+            { "name": "Thiếu Nhi", "link": "am-nhac-viet-nam-thieu-nhi", "url": "video-am-nhac-viet-nam-thieu-nhi" },
+            { "name": "Rap Việt", "link": "am-nhac-viet-nam-nhac-rap", "url": "video-am-nhac-viet-nam-nhac-rap" },
+            { "name": "Rock Việt", "link": "am-nhac-viet-nam-nhac-rock", "url": "video-am-nhac-viet-nam-nhac-rock" }
+        ]
+    }, {
+        "name": "Âu Mỹ",
+        "categories": [
+            { "name": "Pop", "link": "am-nhac-au-my-pop", "url": "video-am-nhac-au-my-pop" },
+            { "name": "Rock", "link": "am-nhac-au-my-rock", "url": "video-am-nhac-au-my-rock" },
+            { "name": "Electronica/Dance", "link": "am-nhac-au-my-dance", "url": "video-am-nhac-au-my-dance" },
+            { "name": "R&B/Hip Hop/Rap", "link": "am-nhac-au-my-r-b-hip-hop-rap", "url": "video-am-nhac-au-my-r-b-hip-hop-rap" },
+            { "name": "Blues/Jazz", "link": "am-nhac-au-my-blue-jazz", "url": "video-am-nhac-au-my-blue-jazz" },
+            { "name": "Country", "link": "cam-nhac-au-my-ountry", "url": "video-am-nhac-au-my-country" },
+            { "name": "Latin", "link": "am-nhac-au-my-latin", "url": "video-am-nhac-au-my-latin" },
+            { "name": "Indie", "link": "am-nhac-au-my-indie", "url": "video-am-nhac-au-my-indie" },
+            { "name": "Âu Mỹ Khác", "link": "am-nhac-au-my-au-my-khac", "url": "video-am-nhac-au-my-au-my-khac" }
+        ]
+    }, {
+        "name": "Châu Á",
+        "categories": [
+            { "name": "Nhạc Hàn", "link": "am-nhac-han-quoc", "url": "video-am-nhac-han-quoc" },
+            { "name": "Nhạc Hoa", "link": "am-nhac-nhac-hoa", "url": "video-am-nhac-nhac-hoa" },
+            { "name": "Nhạc Nhật", "link": "am-nhac-nhac-nhat", "url": "video-am-nhac-nhac-nhat" },
+            { "name": "Nhạc Thái", "link": "am-nhac-nhac-thai", "url": "video-am-nhac-nhac-thai" }
+        ]
+    }, {
+        "name": "Khác",
+        "categories": [
+            { "name": "Karaoke", "link": "am-nhac-karaoke", "url": "video-am-nhac-karaoke" },
+            { "name": "Clip Vui", "link": "giai-tri-funny-clip", "url": "video-giai-tri-funny-clip" },
+            { "name": "Hài Kịch", "link": "giai-tri-hai-kich", "url": "video-giai-tri-hai-kich" },
+            { "name": "Thể Loại Khác", "link": "am-nhac-the-loai-khac", "url": "video-am-nhac-the-loai-khac" },
+            { "name": "Giải Trí Khác", "link": "giai-tri-khac", "url": "video-giai-tri-khac" }
+        ]
+    }, {
+        "name": "Phim",
+        "categories": [
+            { "name": "Phim Việt Nam", "link": "giai-tri-phim-viet-nam", "url": "video-giai-tri-phim-viet-nam" },
+            { "name": "Phim Trung Quốc", "link": "giai-tri-phim-trung-quoc", "url": "video-giai-tri-phim-trung-quoc" },
+            { "name": "Phim Thái Lan", "link": "giai-tri-phim-thai-lan", "url": "video-giai-tri-phim-thai-lan" },
+            { "name": "Phim Hoạt Hình", "link": "giai-tri-phim-hoat-hinh", "url": "video-giai-tri-phim-hoat-hinh" },
+            { "name": "Phim Hàn Quốc", "link": "giai-tri-phim-han-quoc", "url": "video-giai-tri-phim-han-quoc" },
+            { "name": "Phim Thiếu Nhi", "link": "giai-tri-phim-thieu-nhi", "url": "video-giai-tri-phim-thieu-nhi" },
+            { "name": "Phim Nhật Bản", "link": "giai-tri-phim-nhat-ban", "url": "video-giai-tri-phim-nhat-ban" }
+        ]
+    }]
+}

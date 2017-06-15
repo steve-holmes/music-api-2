@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "hungdo",
+    "password": null,
+    "database": "musicapi-dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "hungdo",
+    "password": null,
+    "database": "musicapi-test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "hungdo",
+    "password": null,
+    "database": "musicapi-production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
