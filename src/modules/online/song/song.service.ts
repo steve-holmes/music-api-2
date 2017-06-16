@@ -14,8 +14,9 @@ export class SongService {
         private songLoader: SongLoader
     ) {}
 
-    async getSongs(category: string, page: number = 1) {
-        const { name } = await this.songRepository.getCategory(SongHelper.getLink(category));
+    async getSongs(category: string = 'nhac-tre-moi', page: number = 1) {
+        let categoryInfo = await this.songRepository.getCategory(SongHelper.getLink(category));
+        categoryInfo = SongHelper.transformCategory(categoryInfo);
         
         const url = this.songAPI.getURL(category, page);
         const songs = <any[]>(await this.songLoader.response(url));
@@ -23,7 +24,7 @@ export class SongService {
         this.songRepository.saveSongs(songs);
 
         return {
-            category: name,
+            category: categoryInfo,
             songs: SongHelper.songs(songs)
         };
     }

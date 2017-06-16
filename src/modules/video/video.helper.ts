@@ -12,6 +12,14 @@ export class VideoHelper extends ModelHelper {
         return link;
     }
 
+    static transformCategory(category) {
+        return {
+            name: category.name,
+            newlink: category.link,
+            hotlink: category.link + HOT_VIDEO_LINK_SUFFIX
+        };
+    }
+
     static videos(videos) {
         return videos.map(video => ({
             id: VideoHelper.getId(video.url),

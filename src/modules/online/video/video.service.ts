@@ -14,8 +14,9 @@ export class VideoService {
         private videoLoader: VideoLoader
     ) {}
 
-    async getVideos(category: string, page: number = 1) {
-        const { name } = await this.videoRepository.getCategory(VideoHelper.getLink(category));
+    async getVideos(category: string = 'am-nhac-viet-nam-nhac-tre', page: number = 1) {
+        let categoryInfo = await this.videoRepository.getCategory(VideoHelper.getLink(category));
+        categoryInfo = VideoHelper.transformCategory(categoryInfo);
         
         const url = this.videoAPI.getURL(category, page);
         const videos = <any[]>(await this.videoLoader.response(url));
@@ -23,7 +24,7 @@ export class VideoService {
         this.videoRepository.saveVideos(videos);
 
         return {
-            category: name,
+            category: categoryInfo,
             videos: VideoHelper.videos(videos)
         };
     }

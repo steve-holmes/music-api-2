@@ -14,6 +14,14 @@ export class PlaylistHelper extends ModelHelper {
         return link;
     }
 
+    static transformCategory(category) {
+        return {
+            name: category.name,
+            newlink: category.link + NEW_LINK_SUFFIX,
+            hotlink: category.link + HOT_LINK_SUFFIX
+        };
+    }
+
     static playlists(playlists) {
         return playlists.map(playlist => ({
             id: PlaylistHelper.getId(playlist.url),

@@ -14,6 +14,14 @@ export class SongHelper extends ModelHelper {
         return link;
     }
 
+    static transformCategory(category) {
+        return {
+            name: category.name,
+            newlink: category.link + NEW_LINK_SUFFIX,
+            hotlink: category.link + HOT_LINK_SUFFIX
+        };
+    }
+
     static songs(songs) {
         return songs.map(song => ({
             id: SongHelper.getId(song.url),

@@ -14,8 +14,12 @@ export class PlaylistService {
         private playlistLoader: PlaylistLoader
     ) {}
 
-    async getPlaylists(category: string, page: number = 1) {
-        const { name } = await this.playlistRepository.getCategory(PlaylistHelper.getLink(category));
+    async getPlaylists(category: string = 'nhac-tre-moi', page: number = 1) {
+        let categoryInfo = await this.playlistRepository.getCategory(PlaylistHelper.getLink(category));
+        console.log('------------');
+        console.log(categoryInfo);
+        console.log('------------');
+        categoryInfo = PlaylistHelper.transformCategory(categoryInfo);
         
         const url = this.playlistAPI.getURL(category, page);
         const playlists = <any[]>(await this.playlistLoader.response(url));
@@ -23,7 +27,7 @@ export class PlaylistService {
         this.playlistRepository.savePlaylists(playlists);
 
         return {
-            category: name,
+            category: categoryInfo,
             playlists: PlaylistHelper.playlists(playlists)
         };
     }
