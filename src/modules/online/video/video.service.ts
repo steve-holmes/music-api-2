@@ -17,6 +17,7 @@ export class VideoService {
     async getVideos(category: string = 'am-nhac-viet-nam-nhac-tre', page: number = 1) {
         let categoryInfo = await this.videoRepository.getCategory(VideoHelper.getLink(category));
         categoryInfo = VideoHelper.transformCategory(categoryInfo);
+        categoryInfo.suffix = VideoHelper.getSuffix(category);
         
         const url = this.videoAPI.getURL(category, page);
         const videos = <any[]>(await this.videoLoader.response(url));

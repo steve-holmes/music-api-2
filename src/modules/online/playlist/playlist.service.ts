@@ -16,10 +16,8 @@ export class PlaylistService {
 
     async getPlaylists(category: string = 'nhac-tre-moi', page: number = 1) {
         let categoryInfo = await this.playlistRepository.getCategory(PlaylistHelper.getLink(category));
-        console.log('------------');
-        console.log(categoryInfo);
-        console.log('------------');
         categoryInfo = PlaylistHelper.transformCategory(categoryInfo);
+        categoryInfo.suffix = PlaylistHelper.getSuffix(category);
         
         const url = this.playlistAPI.getURL(category, page);
         const playlists = <any[]>(await this.playlistLoader.response(url));

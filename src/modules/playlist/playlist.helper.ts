@@ -14,6 +14,13 @@ export class PlaylistHelper extends ModelHelper {
         return link;
     }
 
+    static getSuffix(category: string): string {
+        if (category.indexOf(HOT_LINK_SUFFIX) == -1) {
+            return 'new';
+        }
+        return 'hot';
+    }
+
     static transformCategory(category) {
         return {
             name: category.name,

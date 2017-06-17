@@ -17,6 +17,7 @@ export class SongService {
     async getSongs(category: string = 'nhac-tre-moi', page: number = 1) {
         let categoryInfo = await this.songRepository.getCategory(SongHelper.getLink(category));
         categoryInfo = SongHelper.transformCategory(categoryInfo);
+        categoryInfo.suffix = SongHelper.getSuffix(category);
         
         const url = this.songAPI.getURL(category, page);
         const songs = <any[]>(await this.songLoader.response(url));
