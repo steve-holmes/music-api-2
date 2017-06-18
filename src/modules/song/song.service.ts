@@ -2,6 +2,7 @@ import { Component } from '@nestjs/common';
 
 import { SongLoader } from './song.loader';
 import { SongRepository } from './song.repository';
+import { SongHelper } from './song.helper';
 
 @Component()
 export class SongService {
@@ -15,7 +16,7 @@ export class SongService {
         let song = await this.songRepository.findSong(id);
         song = await this.songLoader.reponse(song.url);
 
-        return { track: song };
+        return { track: SongHelper.tracks([song])[0] };
     }
 
 }

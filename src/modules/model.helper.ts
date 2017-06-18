@@ -6,4 +6,15 @@ export class ModelHelper {
         return id;
     }
 
+    static tracks(tracks) {
+        return tracks.map(track => ({
+            id: ModelHelper.getId(track.info),
+            name: track.title,
+            singer: track.singer,
+            avatar: track.avatar,
+            lyric: track.lyric,
+            url: track.location
+        }));
+    }
+
 }

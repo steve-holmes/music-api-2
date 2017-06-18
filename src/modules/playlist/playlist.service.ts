@@ -19,7 +19,7 @@ export class PlaylistService {
         this.playlistRepository.savePlaylists(playlist.others);
 
         return {
-            tracks: playlist.tracks,
+            tracks: PlaylistHelper.tracks(playlist.tracks),
             others: PlaylistHelper.playlists(playlist.others)
         };
     }
