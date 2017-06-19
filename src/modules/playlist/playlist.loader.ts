@@ -12,9 +12,9 @@ export class PlaylistLoader {
                 const $body = $(body);
 
                 const $scripts = $body.find('div.playing_absolute script');
-                const $script = $scripts.eq(1);
+                const $script = $scripts.eq(2);
                 const tracksPromise = this.tracksPromiseFromScript($script.html());
-                
+
                 const $relativePlaylists = $body.find('div.box_playlist_recommended div.list_item_music li');
                 const relativePlaylistPromise = this.relativePlaylistFromDOM($relativePlaylists);
 
