@@ -19,7 +19,7 @@ export class SingerService {
 
         this.singerRepository.saveSingers(<any[]>singers);
 
-        return SingerHelper.singers(singers);
+        return { singers: SingerHelper.singers(singers) };
     }
 
     async getSingers(alpha: string, page: number = 1) {
@@ -27,7 +27,7 @@ export class SingerService {
 
         this.singerRepository.saveSingers(<any[]>singers);
 
-        return SingerHelper.singers(singers);
+        return { singers: SingerHelper.singers(singers) };
     }
 
 }
