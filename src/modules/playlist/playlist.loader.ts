@@ -11,9 +11,7 @@ export class PlaylistLoader {
             .then(body => {
                 const $body = $(body);
 
-                const $scripts = $body.find('div.playing_absolute script');
-                const $script = $scripts.eq(2);
-                const tracksPromise = this.tracksPromiseFromScript($script.html());
+                const tracksPromise = this.getTracksPromise($body);
 
                 const $relativePlaylists = $body.find('div.box_playlist_recommended div.list_item_music li');
                 const relativePlaylistPromise = this.relativePlaylistFromDOM($relativePlaylists);
@@ -21,6 +19,22 @@ export class PlaylistLoader {
                 return Promise.all([tracksPromise, relativePlaylistPromise]);
             })
             .then(([tracks, others]) => ({ tracks, others }));
+    }
+
+    responseTracks(url) {
+        return this.request(url)
+            .then(body => {
+                const $body = $(body);
+                return this.getTracksPromise($body);
+            });
+    }
+
+    private getTracksPromise($body) {
+        const $scripts = $body.find('div.playing_absolute script');
+        const $script = $scripts.eq(2);
+        const tracksPromise = this.tracksPromiseFromScript($script.html());
+
+        return tracksPromise;
     }
 
     private tracksPromiseFromScript($scriptHtml) {

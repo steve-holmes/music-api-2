@@ -21,6 +21,19 @@ export class RankLoader {
         return rankPromise.then(([songs, playlists, videos]) => ({ songs, playlists, videos }))
     }
 
+    responseSongsURL(country: string) {
+        return new Promise((resolve, reject) => {
+            request(`${baseURL}${songPath}/top-20.${country}${suffixURL}`, (error, response, body) => {
+                if (error) { return reject(error); }
+                
+                const $songsURL = $(body).find('div.box_view_week a.active_play');
+                const songsURL = $songsURL.attr('href');
+
+                resolve(songsURL);
+            });
+        });
+    }
+
     private getSongPromise(country: string) {
         return new Promise((resolve, reject) => {
             request(`${baseURL}${songPath}/top-20.${country}${suffixURL}`, (error, response, body) => {

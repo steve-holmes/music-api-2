@@ -18,4 +18,15 @@ export class RankController {
         }});
     }
 
+    @Get('/songs/:country')
+    async getSongs(@Response() response, @Param('country') country) {
+        const countryName = this.rankService.getCountryName(country);
+        const tracks = await this.rankService.getSongs(country);
+
+        return response.status(HttpStatus.OK).json({data: {
+            country: countryName,
+            tracks: tracks
+        }});
+    }
+
 }

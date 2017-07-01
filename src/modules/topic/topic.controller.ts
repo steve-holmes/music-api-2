@@ -10,7 +10,7 @@ export class TopicController {
     @Get('/')
     async getTopics(@Response() response) {
         const topics = await this.topicService.getTopics();
-        return response.status(HttpStatus.OK).json({ data: topics });
+        return response.status(HttpStatus.OK).json({ data: { topics } });
     }
 
     @Get('/:id')

@@ -5,7 +5,7 @@ import { Component } from '@nestjs/common';
 export class PageParser {
 
     parse($body) {
-        const $pages = $body.find('div#marquee_navid_slide a');
+        const $pages = $body.find('ul#marquee_imgid_musicHubMarquee a');
         
         const self = this;
         const pages = $pages.map(function (i, elem) {
@@ -20,9 +20,14 @@ export class PageParser {
 
         const $image = $page.find('img');
         const avatar = $image.attr('src');
-        const name = $image.attr('title');
 
-        return { name, avatar, url };
+        const title = <string>$image.attr('title');
+        const separator = title.indexOf(' - ');
+        
+        const name = title.substring(0, separator);
+        const singer = title.substring(separator + 3);
+
+        return { name, singer, avatar, url };
     }
 
 }

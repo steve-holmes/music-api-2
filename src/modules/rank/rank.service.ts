@@ -6,6 +6,8 @@ import { PlaylistRepository } from '../playlist/playlist.repository';
 import { SongRepository } from '../song/song.repository';
 import { VideoRepository } from '../video/video.repository';
 
+import { PlaylistLoader } from '../playlist/playlist.loader';
+
 import { PlaylistHelper } from '../playlist/playlist.helper';
 import { SongHelper } from '../song/song.helper';
 import { VideoHelper } from '../video/video.helper';
@@ -15,6 +17,7 @@ export class RankService {
 
     constructor(
         private rankLoader: RankLoader,
+        private playlistLoader: PlaylistLoader,
         private playlistRepository: PlaylistRepository,
         private songRepository: SongRepository,
         private videoRepository: VideoRepository
@@ -32,6 +35,13 @@ export class RankService {
             playlists: PlaylistHelper.playlists(rank.playlists),
             videos: VideoHelper.videos(rank.videos)
         };
+    }
+
+    async getSongs(country: string) {
+        const songsURL = await this.rankLoader.responseSongsURL(country);
+        const tracks = await this.playlistLoader.responseTracks(songsURL);
+
+        return PlaylistHelper.tracks(tracks);
     }
 
     getCountryName(country: string): string {
