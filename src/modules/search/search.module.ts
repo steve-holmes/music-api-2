@@ -16,13 +16,18 @@ import { PlaylistParser } from './playlist.parser';
 import { SongParser } from './song.parser';
 import { VideoParser } from './video.parser';
 
+import { PlaylistRepository } from '../playlist/playlist.repository';
+import { SongRepository } from '../song/song.repository';
+import { VideoRepository } from '../video/video.repository';
+
 @Shared()
 @Module({
     controllers: [ SearchController ],
     components: [
         SearchService, SongService, PlaylistService, VideoService,
         SearchLoader, PlaylistLoader, SongLoader, VideoLoader,
-        PlaylistParser, SongParser, VideoParser
+        PlaylistParser, SongParser, VideoParser,
+        PlaylistRepository, SongRepository, VideoRepository
     ]
 })
 export class SearchModule {}
