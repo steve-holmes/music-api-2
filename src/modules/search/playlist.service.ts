@@ -2,6 +2,7 @@ import { Component } from '@nestjs/common';
 
 import { PlaylistLoader } from './playlist.loader';
 import { PlaylistRepository } from '../playlist/playlist.repository';
+import { PlaylistHelper } from '../playlist/playlist.helper';
 
 @Component()
 export class PlaylistService {
@@ -16,7 +17,7 @@ export class PlaylistService {
 
         this.playlistRepository.savePlaylists(<any[]>playlists);
 
-        return { playlists };
+        return { playlists: PlaylistHelper.playlists(playlists) };
     }
 
 }

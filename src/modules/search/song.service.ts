@@ -2,6 +2,7 @@ import { Component } from '@nestjs/common';
 
 import { SongLoader } from './song.loader';
 import { SongRepository } from '../song/song.repository';
+import { SongHelper } from '../song/song.helper';
 
 @Component()
 export class SongService {
@@ -16,7 +17,7 @@ export class SongService {
 
         this.songRepository.saveSongs(<any[]>songs);
 
-        return { songs };
+        return { songs: SongHelper.songs(songs) };
     }
 
 }
